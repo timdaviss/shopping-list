@@ -1,0 +1,28 @@
+{
+  "root": "apps/shopping-list-e2e",
+  "sourceRoot": "apps/shopping-list-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/shopping-list-e2e/cypress.json",
+        "devServerTarget": "shopping-list:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "shopping-list:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/shopping-list-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["shopping-list"]
+}
