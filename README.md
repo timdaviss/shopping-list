@@ -35,4 +35,9 @@ Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cy
 Run `nx affected:e2e` to execute the end-to-end tests affected by a change.<br>
 
 ### Reference
-[Nx Documentation](https://nx.dev)
+[Nx](https://nx.dev) | 
+[React](https://reactjs.org/docs/getting-started.html) | 
+[Router](https://reactrouter.com/docs/en/v6) | 
+[MUI](https://mui.com) | 
+[Styled](https://styled-components.com/docs) | 
+[Express](https://expressjs.com/)
