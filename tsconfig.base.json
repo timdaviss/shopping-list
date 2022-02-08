@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"],
       "@shopping-list/api-interfaces": ["libs/api-interfaces/src/index.ts"]
     }
   },

@@ -5,15 +5,16 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test",
-    "graph": "nx graph"
+    "test": "nx test"
   },
   "private": true,
   "dependencies": {
+    "@mui/icons-material": "^5.3.1",
     "@mui/material": "^5.4.0",
     "@mui/styled-engine-sc": "^5.3.0",
     "core-js": "^3.6.5",
     "express": "4.17.2",
+    "mysql": "^2.18.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-is": "17.0.2",

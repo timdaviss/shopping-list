@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Message } from '@shopping-list/api-interfaces';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Outlet } from 'react-router-dom';
+import ShoppingList from './shopping-list';
+import { Grid } from '@mui/material';
 
 const Header = styled.header`
   display: flex;
@@ -9,26 +10,36 @@ const Header = styled.header`
   color: white;
 `;
 
+const Main = styled(Grid)`
+  font-family: 'Nunito', sans-serif;
+  padding: 30px 0px;
+`;
+
 export const App = () => {
-  const [m, setMessage] = useState<Message>({ message: '' });
-
-  useEffect(() => {
-    fetch('/api')
-      .then((r) => {
-        const resp = r.json();
-        console.log(resp);
-        return resp;
-      })
-      .then(setMessage);
-  }, []);
-
   return (
     <>
       <Header>
-        <h3 style={{ margin: '20px', fontWeight: '500'}}>SHOPPING LIST</h3>
+        <h3
+          style={{
+            margin: '20px',
+            fontWeight: '500',
+            textTransform: 'uppercase',
+          }}
+        >
+          Shopping List
+        </h3>
       </Header>
-      <Outlet></Outlet>
-      <div>{m.message}</div>
+      <Main container spacing={2} justifyContent="space-between">
+        <Grid item xs />
+        <Grid container item xs={8} spacing={2} direction="column" minHeight={500}>
+          <Grid item xs />
+          <Grid item xs={8} flexGrow='1' alignItems='stretch'>
+            <ShoppingList />
+          </Grid>
+          <Grid item xs />
+        </Grid>
+        <Grid item xs />
+      </Main>
     </>
   );
 };
