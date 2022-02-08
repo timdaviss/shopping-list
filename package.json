@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
+    "serve": "nx run api:serve",
     "build": "nx build",
     "test": "nx test"
   },
