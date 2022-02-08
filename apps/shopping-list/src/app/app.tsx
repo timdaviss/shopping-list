@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Outlet } from 'react-router-dom';
 import ShoppingList from './shopping-list';
 import { Grid } from '@mui/material';
 
